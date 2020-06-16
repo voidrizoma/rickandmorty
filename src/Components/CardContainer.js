@@ -1,10 +1,10 @@
 import React from "react";
 import Card from "./Card";
-import styled from "styled-components";
+import { CardWrapper } from "../Styles/styles"
 
 const CardList = ({ data }) => {
   return (
-    <Wrapper>
+    <CardWrapper>
       {data.map((item, i) => {
         return (
           <Card
@@ -17,16 +17,8 @@ const CardList = ({ data }) => {
           />
         );
       })}
-    </Wrapper>
+    </CardWrapper>
   );
 };
 
 export default CardList;
-
-const Wrapper = styled.div`
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-`;

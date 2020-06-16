@@ -1,32 +1,16 @@
 import React from "react";
-import styled from "styled-components";
+import { Card,  CardTitle, Span, Img } from "../Styles/styles"
 
 const card = ({ name, image, status, species, gender }) => {
   return (
     <Card>
-      <img alt="" src={image}/>
-      <h2>Nombre: {name}</h2>
-      <p>Especie: {species}</p>
-      <p>Estado: {status}</p>
-      <p>Género: {gender}</p>
+      <Img alt="" src={image}/>
+      <CardTitle>Name: {name}</CardTitle>
+      <Span>Specie: {species}</Span>
+      <Span>Status: {status}</Span>
+      <Span>Gender: {gender}</Span>
     </Card>
   );
 };
 
 export default card;
-
-const Card = styled.div`    
-  display:flex;
-  flex-direction:column;
-  justify-content: center;
-  align-items: center;
-  background-color:#00ca93;
-  margin: 2%;
-  width:100%;
-  heigth:200px;
-  padding: 4% 8%;
-  border-radius: 3px;
-  @media (min-width: 769px) {
-    width:25%;
-  }
-`;
